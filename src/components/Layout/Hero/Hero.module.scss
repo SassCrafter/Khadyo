@@ -1,0 +1,86 @@
+@import "../../../styles/config.module";
+
+.Container {
+  min-height: 100vh;
+  padding: 10rem 0;
+  position: relative;
+
+  @include mq($laptop) {
+    height: 100vh;
+    padding: 5rem 0;
+    @include flexCenter;
+  }
+}
+
+.Name {
+  font-size: 2.4rem;
+}
+
+.Image {
+  // @include mq($laptop) {
+  //   max-width: auto;
+  //   width: 120%;
+  // }
+  @include mq(1400px) {
+    max-width: auto;
+    width: 120%;
+  }
+}
+
+.Action {
+  @include flex(row, center, flex-start);
+}
+
+.Price {
+  margin-bottom: 0;
+  margin-left: 2rem;
+  font-size: 2.3rem;
+
+  span {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+}
+
+.BurgerShape {
+  @include mq($laptop) {
+    width: 14rem;
+  }
+  @include mq($pc) {
+    width: 18rem;
+  }
+}
+
+.OnText {
+  @include mq($laptop) {
+    width: 14rem;
+  }
+}
+
+.ParallaxItem {
+  position: absolute;
+  top: 65%;
+  left: -1rem;
+  width: 6rem;
+
+  &:nth-child(2) {
+    // right: 0;
+    left: calc(100% - 6rem);
+    top: 10%;
+    @include mq(1400px) {
+      left: 113%;
+    }
+  }
+  &:nth-child(3) {
+    left: -1rem;
+    top: 85%;
+  }
+  &:nth-child(4) {
+    left: calc(100% - 5rem);
+    top: 35%;
+    width: 4rem;
+    @include mq(1400px) {
+      left: 130%;
+    }
+  }
+}

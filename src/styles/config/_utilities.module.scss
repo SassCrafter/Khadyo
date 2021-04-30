@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Bgs
+.bg-light {
+  background-color: $light-color;
+}
+
+// Colors
+.primary-color {
+  color: $primary-color;
+}

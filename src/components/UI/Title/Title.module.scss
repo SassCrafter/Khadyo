@@ -1,0 +1,45 @@
+@import "../../../styles/config.module";
+
+.Container {
+  width: 100%;
+  // max-width: 50rem;
+  margin-bottom: 2rem;
+
+  @include mq($tablet) {
+    margin-bottom: 3rem;
+  }
+}
+
+.SmallTitle {
+  font-size: 3.6rem;
+  font-weight: 900;
+  font-family: $cursive-font;
+  color: $primary-color;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+
+  @include mq($pc) {
+    font-size: 4rem;
+  }
+}
+
+.BigTitle {
+  font-size: 4.8rem;
+  text-transform: capitalize;
+  color: $secondary-color;
+
+  @include mq($pc) {
+    font-size: 5.2rem;
+  }
+}
+
+.LargeTitle {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $secondary-color;
+
+  @include mq($pc) {
+    font-size: 6.2rem;
+  }
+}

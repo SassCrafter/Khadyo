@@ -1,0 +1,32 @@
+import React from "react";
+import classes from "./Title.module.scss";
+
+function Title({ children, textAlign, className }) {
+  return <div className={classes.Container}>{children}</div>;
+}
+
+export default Title;
+
+Title.SmallTitle = function TitleSmallTitle({ children, ...restProps }) {
+  return (
+    <h3 className={classes.SmallTitle} {...restProps}>
+      {children}
+    </h3>
+  );
+};
+
+Title.BigTitle = function TitleBigTitle({ children, ...restProps }) {
+  return (
+    <h2 className={classes.BigTitle} {...restProps}>
+      {children}
+    </h2>
+  );
+};
+
+Title.LargeTitle = function TitleLargeTitle({ children, ...restProps }) {
+  return (
+    <h1 className={classes.LargeTitle} {...restProps}>
+      {children}
+    </h1>
+  );
+};
