@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import classes from "./MouseParallax.module.scss";
-import { Shape } from "../../components/";
 
 function MouseParallax({ children, renderItems }) {
 	const [position, setPosition] = useState([]);

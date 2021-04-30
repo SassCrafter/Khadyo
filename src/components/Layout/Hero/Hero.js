@@ -16,7 +16,6 @@ function Hero() {
     return heroParallaxShapes?.map((item, idx) => {
       return (
         <Shape
-          className={classes.Item}
           key={item.id}
           src={item.image}
           alt={item.alt}
