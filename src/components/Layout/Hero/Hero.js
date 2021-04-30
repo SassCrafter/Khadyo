@@ -6,11 +6,11 @@ import { CHECKOUT } from "../../../constants/routes";
 import heroParallaxShapes from "../../../fixtures/heroParallaxShapes";
 
 function Hero() {
-  const itemsRef = useRef([]);
+  // const itemsRef = useRef([]);
 
-  useEffect(() => {
-    itemsRef.current = itemsRef.current.slice(0, heroParallaxShapes.length);
-  }, []);
+  // useEffect(() => {
+  //   itemsRef.current = itemsRef.current.slice(0, heroParallaxShapes.length);
+  // }, []);
 
   const renderParallaxItems = () => {
     return heroParallaxShapes?.map((item, idx) => {
@@ -53,13 +53,11 @@ function Hero() {
       <Flex>
         <Flex.Row flexDirection="rowReverse">
           <Flex.Column>
-            <MouseParallax renderItems={renderParallaxItems}>
-              <BigImage
-                src="/images/hero/burger-promo.png"
-                alt="Chicken Burger"
-                className={classes.Image}
-              />
-            </MouseParallax>
+            <BigImage
+              src="/images/hero/burger-promo.png"
+              alt="Chicken Burger"
+              className={classes.Image}
+            />
           </Flex.Column>
           <Flex.Column>
             <Title>
