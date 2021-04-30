@@ -21,7 +21,7 @@ function Hero() {
           src={item.image}
           alt={item.alt}
           className={classes.ParallaxItem}
-          ref={(el) => (itemsRef.current[idx] = el)}
+          // ref={(el) => (itemsRef.current[idx] = el)}
         />
       );
     });
