@@ -1,1 +1,1 @@
-export { default as MouseParallax } from "./MouseParallax/MouseParallax";
+export { default as Header } from "./Header/Header";

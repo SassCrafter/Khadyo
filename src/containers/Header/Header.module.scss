@@ -1,0 +1,56 @@
+@import "../../styles/config.module";
+
+.Container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 6rem;
+	padding: 1rem 0;
+	z-index: 200;
+	@include flex(row, center);
+	transition: background-color $t-time;
+
+	@include mq($laptop) {
+		height: 8rem;
+	}
+}
+
+.Scrolled {
+	background-color: white;
+
+	&.Open {
+		transition: background-color 300ms linear;
+		background-color: $primary-color;
+	}
+}
+
+.List {
+	width: 100%;
+	height: 100vh;
+	@include flexCenter(column);
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $primary-color;
+	color: white;
+	z-index: 199;
+	transform: translateX(-100%);
+	transition: transform $t-time $t-easing;
+
+	li {
+		margin: 0.25rem 0;
+	}
+
+	a {
+		display: inline-block;
+		padding: 0.25rem 0;
+		color: inherit;
+		font-size: 2.5rem;
+		text-transform: capitalize;
+	}
+
+	&.Open {
+		transform: translateX(0);
+	}
+}

@@ -1,0 +1,21 @@
+@import "../../../styles/config.module";
+
+.Container {
+	width: 3.5rem;
+	height: 3.5rem;
+	@include flexCenter;
+	transition: transform $t-time $t-easing;
+
+	i {
+		color: $primary-color;
+		font-size: 2.4rem;
+		transition: color $t-time linear;
+	}
+}
+
+.Open {
+	transform: rotate(180deg);
+	i {
+		color: white;
+	}
+}

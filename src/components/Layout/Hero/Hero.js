@@ -1,31 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import classes from "./Hero.module.scss";
 import { Section, Flex, BigImage, Title, Button, Shape } from "../../index";
-import { MouseParallax } from "../../../containers/";
 import { CHECKOUT } from "../../../constants/routes";
-import heroParallaxShapes from "../../../fixtures/heroParallaxShapes";
+// import heroParallaxShapes from "../../../fixtures/heroParallaxShapes";
 
 function Hero() {
-  // const itemsRef = useRef([]);
-
-  // useEffect(() => {
-  //   itemsRef.current = itemsRef.current.slice(0, heroParallaxShapes.length);
-  // }, []);
-
-  const renderParallaxItems = () => {
-    return heroParallaxShapes?.map((item, idx) => {
-      return (
-        <Shape
-          key={item.id}
-          src={item.image}
-          alt={item.alt}
-          className={classes.ParallaxItem}
-          // ref={(el) => (itemsRef.current[idx] = el)}
-        />
-      );
-    });
-  };
-
   return (
     <Section className={`${classes.Container} bg-light`}>
       <Shape

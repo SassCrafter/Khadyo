@@ -1,0 +1,23 @@
+@import "../../../styles/config.module";
+
+.Container {
+	@include flexCenter();
+}
+
+.Icon {
+	width: 5rem;
+}
+
+.Text {
+	margin: 0 2rem;
+	text-align: center;
+
+	h4 {
+		margin-bottom: 0.5rem;
+	}
+
+	span {
+		color: $primary-color;
+		font-weight: 600;
+	}
+}

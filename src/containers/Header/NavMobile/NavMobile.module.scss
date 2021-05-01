@@ -1,0 +1,11 @@
+@import "../../../styles/config.module";
+
+.Container {
+	width: 100%;
+	@include flex(row, center);
+	z-index: -1;
+}
+
+.Right {
+	@include flexCenter(row);
+}
