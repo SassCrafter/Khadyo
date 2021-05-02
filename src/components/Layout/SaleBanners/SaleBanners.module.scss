@@ -1,0 +1,167 @@
+@import "../../../styles/config.module";
+
+.FlexContainer {
+	@include flexColumn;
+
+	@include mq($tablet) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.Banner {
+	width: 100%;
+	height: 27rem;
+
+	@include mq($tablet) {
+		width: 45%;
+		margin-bottom: 4rem;
+	}
+	@include mq($laptop) {
+		width: 25%;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+}
+
+.BigBanner {
+	@include mq($tablet) {
+		width: 100%;
+	}
+	@include mq($laptop) {
+		width: 45%;
+	}
+}
+
+.FirstBanner {
+	background-image: url("../../../assets/images/banners/banner-1.jpg");
+
+	.Shape {
+		top: -2rem;
+		right: -2rem;
+	}
+}
+
+.SecondBanner {
+	background-image: url("../../../assets/images/banners/banner-2.jpg");
+
+	.Shape {
+		width: 7rem;
+		bottom: -4rem;
+	}
+
+	.Image {
+		top: 35%;
+		right: -2rem;
+	}
+
+	.Price {
+		top: 35%;
+		right: 10%;
+	}
+}
+
+.ThirdBanner {
+	background-image: url("../../../assets/images/banners/banner-3.jpg");
+	text-align: right;
+
+	.Image {
+		left: 0;
+		top: 20%;
+	}
+
+	.Price {
+		top: 60%;
+		left: 25%;
+
+		@include mq($laptop) {
+			left: 10%;
+		}
+	}
+}
+
+.FourthBanner {
+	background-image: url("../../../assets/images/banners/banner-4.jpg");
+
+	.Shape {
+		width: 7rem;
+		bottom: -4rem;
+	}
+
+	.Image {
+		top: 30%;
+		right: -2rem;
+		width: 14rem;
+	}
+
+	.Price {
+		top: 30%;
+		right: 20%;
+
+		@include mq($laptop) {
+			right: 10%;
+		}
+	}
+}
+
+.FifthBanner {
+	background-color: #111;
+	text-align: right;
+
+	.Image {
+		left: 0;
+		top: 40%;
+	}
+
+	.Price {
+		top: 60%;
+		left: 25%;
+		@include mq($laptop) {
+			left: 10%;
+		}
+	}
+}
+
+.SixthBanner {
+	background-image: url("../../../assets/images/banners/banner-5.jpg");
+
+	.Shape {
+		width: 7rem;
+		left: 0;
+		bottom: -3rem;
+	}
+
+	.Image {
+		top: 30%;
+		right: -2rem;
+		width: 14rem;
+	}
+
+	.Price {
+		top: 30%;
+		right: 20%;
+	}
+}
+
+.Image {
+	max-width: 18rem;
+	position: absolute;
+}
+
+.Price {
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	background-color: $primary-color;
+	color: white;
+	text-align: center;
+	line-height: 5rem;
+	position: absolute;
+	font-weight: 900;
+	font-size: 1.8rem;
+}

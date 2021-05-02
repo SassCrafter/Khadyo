@@ -1,0 +1,34 @@
+@import "../../../styles/config.module";
+
+.Container {
+	padding: 4rem 2rem 2rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.Content {
+	position: relative;
+	z-index: 2;
+}
+
+.Title {
+	font-size: 3.5rem;
+	font-weight: 900;
+}
+
+.Subtitle {
+	font-size: 1.6rem;
+}
+
+.Btn {
+	margin: 2rem 0;
+
+	&:hover {
+		border-color: white;
+		color: white;
+	}
+}

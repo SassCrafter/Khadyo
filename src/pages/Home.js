@@ -1,12 +1,13 @@
 import React from "react";
-import { Hero } from "../components/";
+import { Hero, SaleBanners } from "../components/";
 
 function Home() {
-  return (
-    <main>
-      <Hero />
-    </main>
-  );
+	return (
+		<main>
+			<Hero />
+			<SaleBanners />
+		</main>
+	);
 }
 
 export default Home;
