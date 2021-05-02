@@ -3,16 +3,27 @@
 .Container {
 	width: 3rem;
 	height: 3rem;
+	border: 1px solid transparent;
 	border-radius: 50%;
 	background-color: $primary-color;
 	@include flexCenter;
 	margin-right: 2rem;
 	transition: background-color $t-time linear;
 	position: relative;
+	cursor: pointer;
 
 	a {
 		color: white;
 		transition: color $t-time linear;
+	}
+
+	&:hover {
+		border-color: $primary-color;
+		background-color: transparent;
+
+		a {
+			color: $primary-color;
+		}
 	}
 }
 
@@ -22,18 +33,27 @@
 	a {
 		color: $primary-color;
 	}
+
+	&:hover {
+		border-color: white;
+
+		a {
+			color: white;
+		}
+	}
 }
 
 .Counter {
-	display: block;
-	width: 2rem;
-	height: 2rem;
-	line-height: 2rem;
-	text-align: center;
-	border-radius: 50%;
-	background-color: $yellow;
-	color: white;
 	position: absolute;
 	top: -0.5rem;
 	right: -0.5rem;
+	background-color: $yellow;
+	width: 1.8rem;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	text-align: center;
+	font-size: 1.2rem;
+	display: block;
+	border-radius: 50%;
+	color: #ffffff;
 }

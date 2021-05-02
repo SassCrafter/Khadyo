@@ -18,10 +18,13 @@
 
 .Scrolled {
 	background-color: white;
+	animation: headerScale 400ms ease;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
 	&.Open {
+		box-shadow: none;
 		transition: background-color 300ms linear;
-		background-color: $primary-color;
+		background-color: transparent;
 	}
 }
 
@@ -48,9 +51,24 @@
 		color: inherit;
 		font-size: 2.5rem;
 		text-transform: capitalize;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&.Open {
 		transform: translateX(0);
+	}
+}
+
+@keyframes headerScale {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
 	}
 }

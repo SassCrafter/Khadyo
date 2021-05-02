@@ -6,6 +6,7 @@ export { default as Title } from "./UI/Title/Title";
 export { default as Button } from "./UI/Button/Button";
 export { default as Shape } from "./UI/Shape/Shape";
 export { default as Logo } from "./UI/Logo/Logo";
+export { default as Banner } from "./UI/Banner/Banner";
 
 // Layout
 export { default as Hero } from "./Layout/Hero/Hero";
