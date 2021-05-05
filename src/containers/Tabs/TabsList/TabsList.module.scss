@@ -1,0 +1,11 @@
+@import "../../../styles/config.module";
+
+.List {
+  @include flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  @include mq($laptop) {
+    justify-content: flex-start;
+  }
+}

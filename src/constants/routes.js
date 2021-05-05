@@ -6,3 +6,4 @@ export const SINGUP = "/signup";
 export const MENU = "/menu";
 export const BURGER_BUILDER = "/burger_builder";
 export const CONTACT = "/contact";
+export const PRODUCT = "/product";

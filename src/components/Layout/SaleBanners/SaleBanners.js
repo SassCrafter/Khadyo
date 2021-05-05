@@ -1,95 +1,100 @@
 import React from "react";
-import { Section, Banner, Shape } from "../../index";
+import { Section, Banner, Shape, FloatingShape } from "../../index";
 import classes from "./SaleBanners.module.scss";
-import saleBannersData from "../../../fixtures/saleBannersData";
 import { CHECKOUT } from "../../../constants/routes";
 
 function SaleBanners() {
-	const btnText = "Order Now";
-	return (
-		<Section>
-			<div className={classes.FlexContainer}>
-				<Banner
-					title="Buzzed Burger"
-					subtitle="Sale off 50% only this week"
-					btnText={btnText}
-					to={CHECKOUT}
-					className={`${classes.Banner} ${classes.FirstBanner} ${classes.BigBanner}`}
-				>
-					<Shape
-						src="/images/shapes/red-burger.png"
-						className={classes.Shape}
-					/>
-				</Banner>
-				<Banner
-					title="Super Delicious Burger"
-					btnText={btnText}
-					to={CHECKOUT}
-					className={`${classes.Banner} ${classes.SecondBanner}`}
-				>
-					<div className={classes.Image}>
-						<img src="/images/burgers/burger-1.png" />
-					</div>
-					<span className={classes.Price}>$15</span>
-					<Shape
-						src="/images/shapes/soda.png"
-						className={classes.Shape}
-						position="bottomLeft"
-					/>
-				</Banner>
-				<Banner
-					title="Delicious Burger"
-					btnText={btnText}
-					to={CHECKOUT}
-					className={`${classes.Banner} ${classes.ThirdBanner}`}
-				>
-					<div className={classes.Image}>
-						<img src="/images/burgers/burger-2.png" />
-					</div>
-					<span className={classes.Price}>$15</span>
-				</Banner>
-				<Banner
-					title="Super Combo Burger"
-					btnText={btnText}
-					to={CHECKOUT}
-					className={`${classes.Banner} ${classes.FourthBanner}`}
-				>
-					<div className={classes.Image}>
-						<img src="/images/burgers/burger-3.png" />
-					</div>
-					<span className={classes.Price}>$15</span>
-					<Shape
-						src="/images/shapes/soda.png"
-						className={classes.Shape}
-						position="bottomLeft"
-					/>
-				</Banner>
-				<Banner
-					title="Super Delicious Burger"
-					btnText={btnText}
-					to={CHECKOUT}
-					className={`${classes.Banner} ${classes.FifthBanner}`}
-				>
-					<div className={classes.Image}>
-						<img src="/images/burgers/burger-4.png" />
-					</div>
-					<span className={classes.Price}>$15</span>
-				</Banner>
-				<Banner
-					title="Chicken Combo Burger"
-					subtitle="Sale off 50% only this week"
-					btnText={btnText}
-					to={CHECKOUT}
-					className={`${classes.Banner} ${classes.SixthBanner} ${classes.BigBanner}`}
-				>
-					<Shape
-						src="/images/shapes/square-burger.png"
-						className={classes.Shape}
-					/>
-				</Banner>
-			</div>
-		</Section>
-	);
+  const btnText = "Order Now";
+  return (
+    <Section className={classes.Container} containerRelative>
+      <FloatingShape
+        src="/images/shapes/leaf.png"
+        alt="leaf image"
+        className={classes.BounceItem}
+      />
+
+      <div className={classes.FlexContainer}>
+        <Banner
+          title="Buzzed Burger"
+          subtitle="Sale off 50% only this week"
+          btnText={btnText}
+          to={CHECKOUT}
+          className={`${classes.Banner} ${classes.FirstBanner} ${classes.BigBanner}`}
+        >
+          <Shape
+            src="/images/shapes/red-burger.png"
+            className={classes.Shape}
+          />
+        </Banner>
+        <Banner
+          title="Super Delicious Burger"
+          btnText={btnText}
+          to={CHECKOUT}
+          className={`${classes.Banner} ${classes.SecondBanner}`}
+        >
+          <div className={classes.Image}>
+            <img src="/images/burgers/burger-1.png" alt="burger" />
+          </div>
+          <span className={classes.Price}>$15</span>
+          <Shape
+            src="/images/shapes/soda.png"
+            className={classes.Shape}
+            position="bottomLeft"
+          />
+        </Banner>
+        <Banner
+          title="Delicious Burger"
+          btnText={btnText}
+          to={CHECKOUT}
+          className={`${classes.Banner} ${classes.ThirdBanner}`}
+        >
+          <div className={classes.Image}>
+            <img src="/images/burgers/burger-2.png" alt="burger" />
+          </div>
+          <span className={classes.Price}>$15</span>
+        </Banner>
+        <Banner
+          title="Super Combo Burger"
+          btnText={btnText}
+          to={CHECKOUT}
+          className={`${classes.Banner} ${classes.FourthBanner}`}
+        >
+          <div className={classes.Image}>
+            <img src="/images/burgers/burger-3.png" alt="burger" />
+          </div>
+          <span className={classes.Price}>$15</span>
+          <Shape
+            src="/images/shapes/soda.png"
+            className={classes.Shape}
+            position="bottomLeft"
+          />
+        </Banner>
+        <Banner
+          title="Super Delicious Burger"
+          btnText={btnText}
+          to={CHECKOUT}
+          className={`${classes.Banner} ${classes.FifthBanner}`}
+        >
+          <div className={classes.Image}>
+            <img src="/images/burgers/burger-4.png" alt="burger" />
+          </div>
+          <span className={classes.Price}>$15</span>
+        </Banner>
+        <Banner
+          title="Chicken Combo Burger"
+          subtitle="Sale off 50% only this week"
+          btnText={btnText}
+          to={CHECKOUT}
+          className={`${classes.Banner} ${classes.SixthBanner} ${classes.BigBanner}`}
+        >
+          <Shape
+            src="/images/shapes/square-burger.png"
+            className={classes.Shape}
+          />
+        </Banner>
+      </div>
+    </Section>
+  );
 }
 
 export default SaleBanners;

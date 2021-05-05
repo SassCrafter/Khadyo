@@ -1,0 +1,69 @@
+@import "../../../styles/config.module";
+
+a {
+  color: $secondary-color;
+
+  &:hover {
+    .Title {
+      color: $primary-color;
+    }
+  }
+}
+
+.Container {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  @include mq($tablet) {
+    width: calc(50% - 1rem);
+  }
+  @include mq($laptop) {
+    width: calc(33.3% - 1rem);
+  }
+}
+
+.Content {
+  width: 100%;
+  @include flex(row, center);
+}
+
+.Image {
+  width: 35%;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.Description {
+  width: 60%;
+}
+
+.Title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  transition: color $t-time linear;
+
+  @include mq($laptop) {
+    font-size: 2.2rem;
+  }
+}
+
+.Ingredients {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+
+  @include mq($laptop) {
+    font-size: 1.5rem;
+  }
+}
+
+.Price {
+  font-size: 1.6rem;
+
+  @include mq($laptop) {
+    font-size: 1.8rem;
+  }
+}

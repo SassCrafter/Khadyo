@@ -1,0 +1,20 @@
+@import "../../../styles/config.module";
+
+.Tomato {
+  right: 0;
+  top: 20rem;
+
+  @include mq($x-large) {
+    right: -15rem;
+    top: 30rem;
+  }
+}
+
+.Triple {
+  top: 0;
+  left: 0;
+
+  @include mq($x-large) {
+    left: -8rem;
+  }
+}
