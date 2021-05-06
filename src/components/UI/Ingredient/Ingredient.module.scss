@@ -1,0 +1,39 @@
+@import "../../../styles/config.module";
+
+.Title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  transition: color $t-time linear;
+
+  @include mq($laptop) {
+    font-size: 2.2rem;
+  }
+
+  @include mq($pc) {
+    font-size: 2.8rem;
+  }
+}
+
+.Ingredients {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+
+  @include mq($laptop) {
+    font-size: 1.5rem;
+  }
+  @include mq($pc) {
+    font-size: 1.6rem;
+  }
+}
+
+.Price {
+  font-size: 1.6rem;
+
+  @include mq($laptop) {
+    font-size: 1.8rem;
+  }
+  @include mq($pc) {
+    font-size: 2rem;
+  }
+}

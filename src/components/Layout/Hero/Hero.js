@@ -28,35 +28,42 @@ function Hero() {
         alt="soda shape"
         className={classes.OnText}
       />
-      <Flex>
-        <Flex.Row flexDirection="rowReverse">
-          <Flex.Column>
-            <BigImage
-              src="/images/hero/burger-promo.png"
-              alt="Chicken Burger"
-              className={classes.Image}
-            />
-          </Flex.Column>
-          <Flex.Column>
-            <Title>
-              <Title.SmallTitle>Best In Town</Title.SmallTitle>
-              <Title.LargeTitle>
-                Enjoy your chicken <span className="primary-color">Burger</span>{" "}
-                Fast Food
-              </Title.LargeTitle>
-            </Title>
-            <h4 className={classes.Name}>Bacon-Potatos-Bbq Sauce</h4>
-            <div className={classes.Action}>
-              <Button btnType="link" to={CHECKOUT}>
-                Order Now
-              </Button>
-              <h4 className={classes.Price}>
-                Price:<span className="primary-color">$10.50</span>
-              </h4>
-            </div>
-          </Flex.Column>
-        </Flex.Row>
-      </Flex>
+      <Section.Container>
+        <Flex>
+          <Flex.Row flexDirection="rowReverse">
+            <Flex.Column className="relative">
+              <BigImage
+                src="/images/hero/burger-promo.png"
+                alt="Chicken Burger"
+                className={classes.Image}
+              />
+              <Shape
+                src="/images/shapes/sale.png"
+                alt="sale image"
+                className={classes.Sale}
+              />
+            </Flex.Column>
+            <Flex.Column>
+              <Title>
+                <Title.SmallTitle>Best In Town</Title.SmallTitle>
+                <Title.LargeTitle>
+                  Enjoy your chicken{" "}
+                  <span className="primary-color">Burger</span> Fast Food
+                </Title.LargeTitle>
+              </Title>
+              <h4 className={classes.Name}>Bacon-Potatos-Bbq Sauce</h4>
+              <div className={classes.Action}>
+                <Button btnType="link" to={CHECKOUT}>
+                  Order Now
+                </Button>
+                <h4 className={classes.Price}>
+                  Price:<span className="primary-color">$10.50</span>
+                </h4>
+              </div>
+            </Flex.Column>
+          </Flex.Row>
+        </Flex>
+      </Section.Container>
     </Section>
   );
 }

@@ -84,3 +84,13 @@
     }
   }
 }
+
+.Sale {
+  top: 0;
+  left: 20%;
+  width: 13rem;
+  @include mq($laptop) {
+    top: 3rem;
+    left: 30%;
+  }
+}

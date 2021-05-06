@@ -2,11 +2,11 @@
 
 .Tomato {
   right: 0;
-  top: 20rem;
+  top: 10rem;
 
   @include mq($x-large) {
-    right: -15rem;
-    top: 30rem;
+    right: 10%;
+    // top: 15rem;
   }
 }
 
@@ -14,7 +14,32 @@
   top: 0;
   left: 0;
 
+  // @include mq($x-large) {
+  //   left: -8rem;
+  // }
+
   @include mq($x-large) {
-    left: -8rem;
+    left: 10%;
+  }
+}
+
+.Burger {
+  right: 0;
+  bottom: 12rem;
+  width: 12rem;
+
+  @include mq($pc) {
+    width: 15rem;
+  }
+}
+
+.Scatter {
+  width: 15rem;
+  top: 20rem;
+  left: 0;
+
+  @include mq($x-large) {
+    top: 40rem;
+    width: 20rem;
   }
 }

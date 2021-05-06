@@ -19,6 +19,17 @@
   // }
 }
 
+.BounceRight {
+  top: auto;
+  left: auto;
+  bottom: 15rem;
+  right: 0;
+
+  @include mq($x-large) {
+    right: -2rem;
+  }
+}
+
 .FlexContainer {
   @include flexColumn;
 

@@ -22,9 +22,24 @@ function Menu() {
       };
     });
   });
-  console.log(menuItems);
   return (
-    <Section className={classes.Container} containerRelative>
+    <Section className={`${classes.Container} relative`} containerRelative>
+      <Shape
+        className={classes.Donuts}
+        src="/images/shapes/donuts.png"
+        alt="donuts shape"
+        position="topRight"
+      />
+      <Shape
+        className={classes.Burger}
+        src="/images/shapes/burger.png"
+        alt="burger shape"
+      />
+      <Shape
+        className={classes.Scatter}
+        src="/images/shapes/scatter.png"
+        alt="scatter shape"
+      />
       <FloatingShape
         className={classes.Tomato}
         src="/images/shapes/sm-tomato.png"
@@ -35,13 +50,7 @@ function Menu() {
         src="/images/shapes/triple.png"
         alt="Triple shape"
       />
-      <Shape
-        className={classes.Donuts}
-        src="/images/shapes/donuts.png"
-        alt="donuts shape"
-        position="topRight"
-      />
-      <div className="relative">
+      <Section.Container className="relative">
         <Title>
           <Title.SmallTitle>Food Items</Title.SmallTitle>
           <Title.BigTitle>
@@ -49,7 +58,7 @@ function Menu() {
           </Title.BigTitle>
         </Title>
         <Tabs tabItems={categories} panelItems={menuItems} />
-      </div>
+      </Section.Container>
     </Section>
   );
 }

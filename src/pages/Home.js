@@ -1,5 +1,5 @@
 import React from "react";
-import { Hero, SaleBanners, Menu } from "../components/";
+import { Hero, SaleBanners, Menu, BestQuality, Delivery } from "../components/";
 
 function Home() {
   return (
@@ -7,7 +7,8 @@ function Home() {
       <Hero />
       <SaleBanners />
       <Menu />
-      <section style={{ height: "200vh" }}></section>
+      <BestQuality />
+      <Delivery />
     </main>
   );
 }

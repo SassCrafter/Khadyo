@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-export const floatTopBot = (el, duration = 3, posY = 100, repeat = -1) => {
+export const floatTopBot = (el, duration = 3, posY = 50, repeat = -1) => {
   return gsap.to(el, {
     duration: duration,
     y: `+= ${posY}`,

@@ -3,6 +3,7 @@ import classes from "./Flex.module.scss";
 
 const classNames = {
   rowReverse: classes.RowReverse,
+  three: classes.RowThree,
 };
 
 function Flex({ children, className, ...restProps }) {
@@ -19,13 +20,14 @@ Flex.Row = function FlexRow({
   children,
   flexDirection,
   className,
+  cols,
   ...restProps
 }) {
   return (
     <div
       className={`${classes.Row} ${classNames[flexDirection] || ""} ${
         className || ""
-      }`}
+      } ${classNames[cols]}`}
       {...restProps}
     >
       {children}

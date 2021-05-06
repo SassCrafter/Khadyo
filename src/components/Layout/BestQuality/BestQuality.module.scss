@@ -1,0 +1,47 @@
+@import "../../../styles/config.module";
+
+.Image {
+  @include flexCenter;
+  @include mq($laptop) {
+    width: 50%;
+  }
+}
+
+.Ingredient {
+  @include mq($laptop) {
+    width: 25%;
+  }
+  text-align: center;
+
+  @include mq($laptop) {
+    text-align: left;
+  }
+}
+
+.Right {
+  @include mq($laptop) {
+    text-align: right;
+  }
+}
+
+.IngredientItem {
+  margin-bottom: 2rem;
+
+  @include mq($laptop) {
+    margin-bottom: 4rem;
+  }
+
+  @include mq($pc) {
+    margin-bottom: 6rem;
+  }
+}
+
+.LeftShape,
+.RightShape {
+  display: none;
+  width: 25rem;
+
+  @include mq($laptop) {
+    display: block;
+  }
+}

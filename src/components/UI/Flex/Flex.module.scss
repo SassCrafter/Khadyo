@@ -20,6 +20,14 @@
   }
 }
 
+.Trhee {
+  .Column {
+    @include mq($laptop) {
+      width: 30%;
+    }
+  }
+}
+
 .Column {
   width: 100%;
   // border: 1px solid red;

@@ -26,6 +26,13 @@ export default [
         image: "/images/menu/items/pizza/3.png",
         sale: 15,
       },
+      {
+        id: 3,
+        name: "Tomato",
+        ingredients: "Shirmp, Squid, Pineapple",
+        price: 18,
+        image: "/images/menu/items/pizza/2.png",
+      },
     ],
   },
   {

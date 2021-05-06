@@ -1,8 +1,15 @@
 import React from "react";
 import classes from "./Title.module.scss";
 
-function Title({ children, textAlign, className }) {
-  return <div className={classes.Container}>{children}</div>;
+function Title({ children, textAlign = "left", mw, className }) {
+  return (
+    <div
+      className={`${classes.Container} ${mw ? classes.MW : ""}`}
+      style={{ textAlign }}
+    >
+      {children}
+    </div>
+  );
 }
 
 export default Title;
@@ -28,5 +35,13 @@ Title.LargeTitle = function TitleLargeTitle({ children, ...restProps }) {
     <h1 className={classes.LargeTitle} {...restProps}>
       {children}
     </h1>
+  );
+};
+
+Title.Lead = function TitleLead({ children, ...restProps }) {
+  return (
+    <p className={classes.Lead} {...restProps}>
+      {children}
+    </p>
   );
 };
