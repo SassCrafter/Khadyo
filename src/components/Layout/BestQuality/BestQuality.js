@@ -1,6 +1,13 @@
 import React from "react";
 import classes from "./BestQuality.module.scss";
-import { Section, Title, Flex, Ingredient, BigImage, Shape } from "../../index";
+import {
+  Section,
+  Title,
+  Flex,
+  ProductInfo,
+  BigImage,
+  Shape,
+} from "../../index";
 
 function BestQuality() {
   return (
@@ -28,15 +35,15 @@ function BestQuality() {
         <Flex>
           <Flex.Row cols="three">
             <Flex.Column className={classes.Ingredient}>
-              <Ingredient
+              <ProductInfo
                 title="Moist Sour Cream"
-                ingredients="Shrimp, Squid, Pineapple"
+                description="Shrimp, Squid, Pineapple"
                 price="5"
                 className={classes.IngredientItem}
               />
-              <Ingredient
+              <ProductInfo
                 title="Ground Beef"
-                ingredients="Shrimp, Squid, Pineapple"
+                description="Shrimp, Squid, Pineapple"
                 price="5"
                 className={classes.IngredientItem}
               />
@@ -48,15 +55,15 @@ function BestQuality() {
               />
             </Flex.Column>
             <Flex.Column className={`${classes.Ingredient} ${classes.Right}`}>
-              <Ingredient
+              <ProductInfo
                 title="Green Vegetable"
-                ingredients="Tomato, Cucumber, Onion"
+                description="Tomato, Cucumber, Onion"
                 price="5"
                 className={classes.IngredientItem}
               />
-              <Ingredient
+              <ProductInfo
                 title="Artisen Bunas"
-                ingredients="Shrimp, Squid, Pineapple"
+                description="Shrimp, Squid, Pineapple"
                 price="5"
                 className={classes.IngredientItem}
               />

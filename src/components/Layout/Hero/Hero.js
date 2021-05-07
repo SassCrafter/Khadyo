@@ -1,8 +1,16 @@
 import React from "react";
 import classes from "./Hero.module.scss";
-import { Section, Flex, BigImage, Title, Button, Shape } from "../../index";
+import {
+  Section,
+  Flex,
+  BigImage,
+  Title,
+  Button,
+  Shape,
+  FloatingShape,
+} from "../../index";
+import Parallax from "./Parallax/Parallax";
 import { CHECKOUT } from "../../../constants/routes";
-// import heroParallaxShapes from "../../../fixtures/heroParallaxShapes";
 
 function Hero() {
   return (
@@ -28,10 +36,24 @@ function Hero() {
         alt="soda shape"
         className={classes.OnText}
       />
+      <FloatingShape
+        src="/images/shapes/t-slice-color.png"
+        alt="soda shape"
+        className={classes.FloatTomato}
+      />
+      <FloatingShape
+        direction="horizontal"
+        duration={10}
+        translate={100}
+        src="/images/shapes/leaf-3.png"
+        alt="leaf shape"
+        className={classes.FloatLeaf}
+      />
       <Section.Container>
         <Flex>
           <Flex.Row flexDirection="rowReverse">
             <Flex.Column className="relative">
+              <Parallax />
               <BigImage
                 src="/images/hero/burger-promo.png"
                 alt="Chicken Burger"
@@ -41,6 +63,11 @@ function Hero() {
                 src="/images/shapes/sale.png"
                 alt="sale image"
                 className={classes.Sale}
+              />
+              <Shape
+                src="/images/shapes/red-tomato.png"
+                alt="tomato shape"
+                className={classes.Tomato}
               />
             </Flex.Column>
             <Flex.Column>

@@ -3,7 +3,7 @@ import classes from "./Tabs.module.scss";
 import TabsList from "./TabsList/TabsList";
 import PanelContainer from "./PanelContainer/PanelContainer";
 
-function Tabs({ tabItems, panelItems, renderTab, renderPanel }) {
+function Tabs({ tabItems, panelItems, renderTab, renderPanels }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const changeTabHandler = (id) => {
@@ -16,7 +16,11 @@ function Tabs({ tabItems, panelItems, renderTab, renderPanel }) {
         active={activeIndex}
         onChangeTab={changeTabHandler}
       />
-      <PanelContainer panelsData={panelItems} active={activeIndex} />
+      <PanelContainer
+        panelsData={panelItems}
+        active={activeIndex}
+        renderPanels={renderPanels}
+      />
     </div>
   );
 }

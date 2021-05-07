@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Menu.module.scss";
-import { Section, Title, Shape, FloatingShape } from "../../index";
+import { Section, Title, Shape, FloatingShape, ProductCard } from "../../index";
 import { Tabs } from "../../../containers";
 import menuData from "../../../fixtures/menuData";
 
@@ -22,6 +22,21 @@ function Menu() {
       };
     });
   });
+
+  const renderMenuItems = (active, Wrapper) => {
+    return menuItems[active].map((item) => (
+      <Wrapper key={item.id}>
+        <ProductCard
+          image={item.image}
+          title={item.title}
+          description={item.ingredients}
+          price={item.price}
+          sale={item.sale}
+        />
+      </Wrapper>
+    ));
+  };
+
   return (
     <Section className={`${classes.Container} relative`} containerRelative>
       <Shape
@@ -57,7 +72,11 @@ function Menu() {
             Popular <span className="primary-color">Menu</span>
           </Title.BigTitle>
         </Title>
-        <Tabs tabItems={categories} panelItems={menuItems} />
+        <Tabs
+          tabItems={categories}
+          panelItems={menuItems}
+          renderPanels={renderMenuItems}
+        />
       </Section.Container>
     </Section>
   );

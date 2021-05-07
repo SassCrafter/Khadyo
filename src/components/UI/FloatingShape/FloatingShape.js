@@ -1,19 +1,23 @@
 import React, { useRef } from "react";
 import classes from "./FloatingShape.module.scss";
-import { floatTopBot } from "../../../helpers/animations";
+import { floatTopBot, floatLeftRight } from "../../../helpers/animations";
 
-function FloatingShape({ src, alt = "floating image", vertical, className }) {
+function FloatingShape({
+  src,
+  alt = "floating image",
+  direction = "vertical",
+  className,
+  duration = 3,
+  translate = 50,
+}) {
   const shapeRef = useRef(null);
 
-  floatTopBot(shapeRef.current, 4);
+  direction === "horizontal"
+    ? floatLeftRight(shapeRef.current, duration, translate)
+    : floatTopBot(shapeRef.current, 4);
 
   return (
-    <div
-      className={`${classes.Container} ${vertical ? classes.Vertical : ""} ${
-        className || ""
-      }`}
-      ref={shapeRef}
-    >
+    <div className={`${classes.Container}  ${className || ""}`} ref={shapeRef}>
       <img src={src} alt={alt} />
     </div>
   );

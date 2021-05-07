@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./Actions.module.scss";
 import { Button, OrderBox } from "../../../components/";
-import Icon from "../../../assets/images/icons/bike-driver.png";
 import { LOGIN } from "../../../constants/routes";
 
 function Action() {

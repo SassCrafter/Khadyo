@@ -1,0 +1,37 @@
+@import "../../../styles/config.module";
+
+.Image {
+  width: 100%;
+  @include mq($laptop) {
+    width: 70%;
+  }
+}
+
+.Burger {
+  width: 14rem;
+  bottom: 10%;
+  right: -6rem;
+  transform: rotate(5deg);
+  z-index: -1;
+  display: none;
+
+  @include mq($laptop) {
+    display: block;
+  }
+
+  @include mq($pc) {
+    width: 16rem;
+    right: -8rem;
+  }
+}
+
+.Leaf {
+  top: 5%;
+  right: -10rem;
+  z-index: -1;
+  display: none;
+
+  @include mq($laptop) {
+    display: block;
+  }
+}

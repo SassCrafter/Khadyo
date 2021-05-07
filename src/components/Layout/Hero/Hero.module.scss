@@ -4,6 +4,7 @@
   min-height: 100vh;
   padding: 10rem 0;
   position: relative;
+  overflow: hidden;
 
   @include mq($laptop) {
     height: 100vh;
@@ -92,5 +93,34 @@
   @include mq($laptop) {
     top: 3rem;
     left: 30%;
+  }
+}
+
+.Tomato {
+  top: 0;
+  left: -5rem;
+  width: 18rem;
+}
+
+.FloatTomato {
+  width: 4rem;
+  top: 3rem;
+  right: 1rem;
+
+  @include mq($laptop) {
+    width: 8rem;
+    right: auto;
+    top: 25rem;
+    left: 3rem;
+  }
+}
+
+.FloatLeaf {
+  display: none;
+  bottom: 0;
+  left: 15rem;
+
+  @include mq($laptop) {
+    display: block;
   }
 }

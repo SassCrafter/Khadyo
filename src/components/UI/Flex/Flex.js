@@ -19,17 +19,16 @@ export default Flex;
 Flex.Row = function FlexRow({
   children,
   flexDirection,
+  ai,
   className,
   cols,
   ...restProps
 }) {
+  const rowClasses = `${classes.Row} ${classNames[flexDirection] || ""} ${
+    className || ""
+  } ${classNames[cols] || ""} ${ai === "start" ? classes.AiStart : ""}`;
   return (
-    <div
-      className={`${classes.Row} ${classNames[flexDirection] || ""} ${
-        className || ""
-      } ${classNames[cols]}`}
-      {...restProps}
-    >
+    <div className={rowClasses} {...restProps}>
       {children}
     </div>
   );

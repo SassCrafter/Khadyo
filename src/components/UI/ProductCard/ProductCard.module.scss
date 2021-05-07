@@ -1,0 +1,73 @@
+@import "../../../styles/config.module";
+
+.Container {
+  position: relative;
+  background-color: white;
+}
+
+.Content {
+  width: 100%;
+  @include flex(row, center);
+}
+
+.ContentV {
+  flex-direction: column;
+  align-items: center;
+
+  .Image {
+    width: 100%;
+    margin-bottom: 2rem;
+    @include flex(column, center);
+
+    img {
+      width: 15rem;
+      height: auto;
+    }
+  }
+}
+
+.Link {
+  color: $secondary-color;
+
+  &:hover {
+    .Title {
+      color: $primary-color;
+    }
+  }
+}
+
+.Image {
+  width: 35%;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.Btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  line-height: 1;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 50%;
+  transition: background-color $t-time linear, color $t-time linear;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary-color;
+  }
+}
+
+.BtnV {
+  bottom: auto;
+  top: 1rem;
+}

@@ -1,0 +1,31 @@
+@import "../../../../styles/config.module";
+
+.Container {
+  padding-top: 0;
+}
+
+.Top {
+  @include flex(row, center);
+  margin-bottom: 2rem;
+}
+
+.Image {
+  width: 30%;
+  max-width: 10rem;
+}
+
+.Info {
+  margin-left: 2rem;
+  flex: 1;
+}
+
+.Title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.Subtitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}

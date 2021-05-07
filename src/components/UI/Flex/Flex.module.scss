@@ -5,6 +5,10 @@
   height: 100%;
 }
 
+.AiStart {
+  align-items: flex-start !important;
+}
+
 .Row {
   @include flexColumn(center, space-between);
 

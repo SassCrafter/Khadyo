@@ -1,0 +1,35 @@
+@import "../../../../styles/config.module";
+
+.Container {
+  display: none;
+  @include absolute;
+  width: 100%;
+  height: 100%;
+
+  @include mq($laptop) {
+    display: block;
+  }
+}
+
+.Slice {
+  top: 75%;
+  left: -10rem;
+}
+
+.HotPepper {
+  top: 95%;
+  left: 10rem;
+  width: 14rem;
+}
+
+.Pepper {
+  top: 20%;
+  right: -20%;
+  width: 6rem;
+}
+
+.Sauce {
+  top: 55%;
+  right: -35%;
+  width: 4rem;
+}

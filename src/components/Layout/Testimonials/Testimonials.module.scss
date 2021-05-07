@@ -1,0 +1,30 @@
+@import "../../../styles/config.module";
+
+.Container {
+  padding-bottom: 4rem;
+}
+
+.Bullet {
+  display: inline-block;
+  margin: 0 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  cursor: pointer;
+}
+
+.BulletActive {
+  width: 1rem;
+  height: 1rem;
+  background-color: $primary-color;
+}
+
+.Pagination {
+  width: 100%;
+  position: absolute;
+  bottom: 0 !important;
+  left: 0;
+  z-index: 2;
+  @include flexCenter(row);
+}

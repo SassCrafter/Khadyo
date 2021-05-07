@@ -1,27 +1,9 @@
 import React from "react";
 import classes from "./Section.module.scss";
 
-// function Section({ children, className, container = true, containerRelative }) {
-//   return (
-//     <section className={`${classes.Section} ${className || ""}`}>
-//       {!container ? (
-//         children
-//       ) : (
-//         <div
-//           className={`container ${containerRelative ? classes.Container : ""}`}
-//         >
-//           {children}
-//         </div>
-//       )}
-//     </section>
-//   );
-// }
-
-// export default Section;
-
-function Section({ children, className }) {
+function Section({ children, className, containerRelative, ...restProps }) {
   return (
-    <section className={`${classes.Section} ${className || ""}`}>
+    <section className={`${classes.Section} ${className || ""}`} {...restProps}>
       {children}
     </section>
   );
