@@ -22,7 +22,7 @@ function Header({ windowWidth, scrolled }) {
 		<>
 			<header className={headerClasses}>
 				<div className="container">
-					{windowWidth > 768 ? (
+					{windowWidth > 900 ? (
 						<NavDesktop />
 					) : (
 						<NavMobile
@@ -32,7 +32,7 @@ function Header({ windowWidth, scrolled }) {
 					)}
 				</div>
 			</header>
-			{windowWidth <= 768 && (
+			{windowWidth <= 900 && (
 				<NavList
 					className={`${classes.List} ${
 						isMenuOpen ? classes.Open : ""

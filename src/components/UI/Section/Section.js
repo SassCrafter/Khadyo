@@ -1,12 +1,26 @@
 import React from "react";
 import classes from "./Section.module.scss";
 
-function Section({ children, className, containerRelative, ...restProps }) {
-  return (
-    <section className={`${classes.Section} ${className || ""}`} {...restProps}>
-      {children}
-    </section>
-  );
+function Section({
+  children,
+  type = "section",
+  className,
+  containerRelative,
+  ...restProps
+}) {
+  const sectionClasses = `${classes.Section} ${className || ""}`;
+  const element =
+    type === "footer" ? (
+      <footer className={sectionClasses} {...restProps}>
+        {children}
+      </footer>
+    ) : (
+      <section className={sectionClasses} {...restProps}>
+        {children}
+      </section>
+    );
+
+  return element;
 }
 
 export default Section;

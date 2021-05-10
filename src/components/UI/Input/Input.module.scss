@@ -1,0 +1,32 @@
+@import "../../../styles/config.module";
+
+.Label {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.Input,
+.Select {
+	display: block;
+	width: 100%;
+	outline: none;
+	background-color: transparent;
+	border: 1px solid $gray;
+	border-radius: 0.5rem;
+	padding: 1rem 1.5rem;
+	font-size: 1.6rem;
+	transition: border-color $t-time linear;
+
+	&:hover,
+	&:focus {
+		border-color: $primary-color;
+	}
+}
+
+.Error {
+	color: $error-color;
+	font-size: 1.4rem;
+	text-decoration: capitalize;
+	margin-bottom: 1rem;
+	display: block;
+}

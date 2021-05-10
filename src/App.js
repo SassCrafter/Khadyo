@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home } from "./pages/";
+import { Home, Signup, Login } from "./pages/";
 import { Header } from "./containers/";
+import { Footer } from "./components/";
 import * as Routes from "./constants/routes";
 import { getWindowWidth } from "./helpers/utils";
 
@@ -40,7 +41,14 @@ function App() {
 				<Route exact path={Routes.HOME}>
 					<Home />
 				</Route>
+				<Route exact path={Routes.SIGN_UP}>
+					<Signup />
+				</Route>
+				<Route exact path={Routes.LOGIN}>
+					<Login />
+				</Route>
 			</Switch>
+			<Footer />
 		</Router>
 	);
 }

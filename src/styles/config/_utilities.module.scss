@@ -26,3 +26,21 @@
 .primary-color {
   color: $primary-color;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.mobile-justify-content-start {
+  @include mq($laptop) {
+    justify-content: flex-start;
+  }
+}

@@ -38,7 +38,7 @@ function OurChef() {
               </Title>
 
               <Flex.Row>
-                <Flex.Column>
+                <Flex.Column className="d-flex justify-content-center mobile-justify-content-start">
                   <ProductCard
                     type="vertical"
                     image="/images/burgers/burger-5.png"
@@ -47,7 +47,7 @@ function OurChef() {
                     price={15}
                   />
                 </Flex.Column>
-                <Flex.Column>
+                <Flex.Column className="d-flex justify-content-center">
                   <ProductCard
                     type="vertical"
                     image="/images/burgers/burger-6.png"

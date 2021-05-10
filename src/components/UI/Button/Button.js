@@ -8,20 +8,25 @@ function Button({
   btnType = "btn",
   to,
   className,
+  fullWidth,
   btnStyle,
+  clickHandler,
   ...restProps
 }) {
   const btnClass = classNames(
     classes.Btn,
     className,
-    classes[`btn-${btnStyle}` || ""]
+    classes[`btn-${btnStyle}` || ""],
+    fullWidth ? classes["FullWidth"] : ""
   );
   return btnType === "link" ? (
     <Link className={btnClass} to={to}>
       {children}
     </Link>
   ) : (
-    <button className={btnClass}>{children}</button>
+    <button className={btnClass} onClick={clickHandler}>
+      {children}
+    </button>
   );
 }
 

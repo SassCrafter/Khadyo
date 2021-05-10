@@ -1,0 +1,17 @@
+@import "../../../../styles/config.module";
+
+.Container {
+	@include flex;
+	flex-wrap: wrap;
+}
+
+.Item {
+	width: 100%;
+
+	@include mq($tablet) {
+		width: calc(50% - 2rem);
+	}
+	@include mq($laptop) {
+		width: calc(25% - 2rem);
+	}
+}

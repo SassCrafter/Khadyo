@@ -1,0 +1,11 @@
+@import "../../../styles/config.module";
+
+.Container {
+	padding-bottom: 2rem;
+}
+
+.Line {
+	width: 100%;
+	border-top: 2px dashed $primary-color;
+	margin: 4rem 0;
+}

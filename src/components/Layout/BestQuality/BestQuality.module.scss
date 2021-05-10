@@ -39,9 +39,10 @@
 .LeftShape,
 .RightShape {
   display: none;
-  width: 25rem;
+  width: 15rem;
+  z-index: -1;
 
-  @include mq($laptop) {
+  @include mq($pc) {
     display: block;
   }
 }

@@ -1,0 +1,10 @@
+@import "../../../styles/config.module";
+
+.Flex {
+	@include flex(row, flex-end);
+}
+
+.Group {
+	width: 100%;
+	margin-bottom: 2rem;
+}

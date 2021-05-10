@@ -1,0 +1,32 @@
+@import "../../../../styles/config.module";
+
+.Container {
+	@include flexCenter(column);
+}
+
+.List {
+	width: 100%;
+	max-width: 40rem;
+	@include flex(row, center);
+	margin: 2rem 0;
+
+	li {
+		margin: 0 1rem;
+	}
+
+	a {
+		color: $secondary-color;
+		text-transform: capitalize;
+		font-size: 1.4rem;
+		font-weight: 600;
+		transition: color $t-time linear;
+
+		@include mq($tablet) {
+			font-size: 1.6rem;
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}

@@ -15,6 +15,9 @@ export { default as ProductCard } from "./UI/ProductCard/ProductCard";
 export { default as ProductInfo } from "./UI/ProductInfo/ProductInfo";
 export { default as Slider } from "./UI/Slider/Slider";
 export { default as Rating } from "./UI/Rating/Rating";
+export { default as Input } from "./UI/Input/Input";
+export { default as Form } from "./UI/Form/Form";
+export { default as PageHero } from "./UI/PageHero/PageHero";
 
 // Layout
 export { default as Hero } from "./Layout/Hero/Hero";
@@ -24,3 +27,4 @@ export { default as BestQuality } from "./Layout/BestQuality/BestQuality";
 export { default as Delivery } from "./Layout/Delivery/Delivery";
 export { default as OurChef } from "./Layout/OurChef/OurChef";
 export { default as Testimonials } from "./Layout/Testimonials/Testimonials";
+export { default as Footer } from "./Layout/Footer/Footer";

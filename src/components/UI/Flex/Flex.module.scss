@@ -10,11 +10,12 @@
 }
 
 .Row {
-  @include flexColumn(center, space-between);
+  @include flexColumn(center);
 
   @include mq($laptop) {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 }
 

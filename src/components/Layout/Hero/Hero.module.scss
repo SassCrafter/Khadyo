@@ -106,8 +106,10 @@
   width: 4rem;
   top: 3rem;
   right: 1rem;
+  display: none;
 
-  @include mq($laptop) {
+  @include mq($pc) {
+    display: block;
     width: 8rem;
     right: auto;
     top: 25rem;
@@ -120,7 +122,7 @@
   bottom: 0;
   left: 15rem;
 
-  @include mq($laptop) {
+  @include mq($pc) {
     display: block;
   }
 }
